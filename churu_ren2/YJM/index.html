@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- 手机界面调整 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <link rel="icon" href="ALL/IMG/dubian.ico" />
+    <div id="CSS_in">
+      <!-- CSS -->
+    </div>
+    <!-- JS -->
+    <script src="ALL/JS/jquery-3.6.0.js" defer></script>
+    <script src="ALL/JS/Js_ren2.js" defer></script>
+    <title>BJUT-校园出入码2代</title>
+  </head>
+  <body>
+    <div class="login" id="login">
+      <form method="POST" id="upload-form">
+        <div>
+          <p class="CSS_Titil">北工大出入码</p>
+          <p class="CSS_Titil_then">本界面全面基于前端,不会泄露任何隐私</p>
+          <p class="CSS_Titil_then">以下输入框均为选填</p>
+
+          <p class="CSS_Titil_then_1">袁嘉明 男</p>
+          <input class="CSS_input" type="text" name="first_1_left" placeholder="请您自定义第一行左侧" />
+
+          <p class="CSS_Titil_then_1">学生 19041103</p>
+          <input class="CSS_input" type="text" name="first_1_right" placeholder="请您自定义第一行右侧" />
+
+          <p class="CSS_Titil_then_1">本科生 | 城市建设学部 土木工程 2019级 19041103</p>
+          <input class="CSS_input" type="text" name="first_2" placeholder="请您自定义第二行" />
+
+          <p class="CSS_Titil_then_1">联系电话:15177939513</p>
+          <input class="CSS_input" type="text" name="first_3" placeholder="请您自定义第三行" />
+
+          <p class="CSS_Titil_then_1">离校# 至因其他请补充说明 核酸检查去往北京市垂杨柳医院</p>
+          <input class="CSS_input" type="text" name="chu" placeholder="请您自定义出校理由" />
+
+          <p class="CSS_Titil_then_1">入校# 因其他请补充说明 核酸检查从北京市垂杨柳医院返回</p>
+          <p class="CSS_Titil_then_1">
+            <input class="CSS_input" type="text" name="ru" placeholder="请您自定义入校理由" />
+          </p>
+        </div>
+
+        <div>
+          <a class="a-upload" id="upload_name"> <input type="file" name="file" id="up" />上传头像</a>
+          <p class="CSS_Titil_then_2" id="showFileName">您未选择任何文件</p>
+        </div>
+      </form>
+      <button type="submit" class="CSS_button" onclick="postDate()">OK?</button>
+      <div class="CSS_Titil_then_3">
+        如果您什么都不填入，OK后会跳转至默认界面，IOS在微信浏览器上可能有些问题，且微信浏览器的内核会缩小界面，达不到原生'企业微信'的效果图，建议使用非微信浏览器打开。由于滑动有点难做，我就懒得做了，打开界面后，直接点击绿色大字体
+        <span style="color: rgb(0, 255, 0)">出/入</span>
+        即可切换，点击最下方的
+        <span style="color: rgb(255, 0, 0)">时间条</span>
+        即可再次切换为输入界面 <br />请遵守学校相关防疫要求，本人仅做代码和技术的分享，如若出事概不负责<br />
+        互联网ICP备案：
+        <a href="http://beian.miit.gov.cn/" ; target="_blank">京ICP备2021032418号-1</a>
+        <br />邮箱联系：hty@hty.ink  微信联系：DBY_HTY
+      </div>
+      <br />
+    </div>
+    <!-- --------------------------------------------------->
+    <div data-v-6d47d1cb="" id="html_then">
+      <section data-v-21029715="" data-v-6d47d1cb="" class="wrap" type="jkm">
+        <div data-v-21029715="" class="qrwrap">
+          <div data-v-21029715="" class="touxiang">
+            <img data-v-21029715="" id="img_id" />
+
+            <div data-v-21029715="" class="nameContent">
+              <p data-v-21029715="" class="name">
+                <span id="first_1_left"></span>
+                <span data-v-21029715="" id="first_1_right"></span>
+              </p>
+              <p data-v-21029715="" class="yx" id="first_2"></p>
+              <p data-v-21029715="" class="yx" id="first_3"></p>
+            </div>
+          </div>
+          <div data-v-21029715="">
+            <div data-v-21029715="" class="my-swipe van-swipe">
+              <div class="van-swipe__track" style="transition-duration: 500ms; transform: translateX(-398px); width: 796px">
+                <div data-v-21029715="" class="van-swipe-item" style="width: 398px">
+                  <div data-v-21029715="" class="red" style="font-size: 120px; margin-top: 10px"></div>
+                  <p data-v-21029715="" class="" style="text-align: center"></p>
+                </div>
+                <div data-v-21029715="" class="van-swipe-item" style="width: calc(100vw)">
+                  <div data-v-21029715="" style="font-size: 120px; margin-top: 10px" onclick="churu_onclick()" class="green">
+                    <span id="churu_hanzi">
+                      <!-- 出/入 -->
+                    </span>
+                  </div>
+                  <p data-v-21029715="" class="" style="text-align: center" id="churu_hanzi_shenqintongguo">
+                    <!-- 出/入校申请已通过 -->
+                  </p>
+                  <p data-v-21029715="" style="margin: 10px 10px 50px" id="churu_hanzi_liyou">
+                    <!-- "出离校# 至因其他请补充说明 -->
+                  </p>
+                </div>
+              </div>
+              <div data-v-21029715="" class="custom-indicator">
+                <span id="or_one_two"></span>
+              </div>
+            </div>
+          </div>
+
+          <p data-v-21029715="" style="text-align: center; margin-top: 10px; line-height: 30px; font-size: 18px; font-weight: bold">
+            <span id="time"></span>
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

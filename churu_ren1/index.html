@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- 手机界面调整 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <link rel="icon" href="../churu_ren2/ALL/IMG/dubian.ico" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="CSS_input.css" />
+    <!-- JS -->
+    <script src="../ALL/JS/jquery-3.6.0.js" defer></script>
+    <title>BJUT-校园出入码1代</title>
+    <script>
+      function to_ren1() {
+        if ($.isEmptyObject($("#xuehao").val())) {
+          data_xuehao = "1904xxxx";
+        } else {
+          data_xuehao = $("#xuehao").val();
+        }
+        window.location.href = "../churu_ren1/ren1_main/index.html?xuehao=" + data_xuehao;
+      }
+      function to_return() {
+        window.location.href = "../choose/index.html";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="login" id="login">
+      <div>
+        <p class="CSS_Titil">北工大出入码</p>
+        <p class="CSS_Titil_then">本界面全面基于前端,不会泄露任何隐私</p>
+        <p class="CSS_Titil_then">以下输入框均为选填</p>
+
+        <p class="CSS_Titil_then_1">1904xxxx</p>
+        <input class="CSS_input" type="text" id="xuehao" placeholder="请您自定义学号" />
+      </div>
+      <div>
+        <button class="CSS_button" onclick="to_ren1()">OK?</button>
+      </div>
+      <div>
+        <button class="CSS_button" onclick="to_return()">返回选择界面</button>
+      </div>
+      <div class="CSS_Titil_then_3">
+        如果您什么都不填入，OK后会跳转至默认界面，IOS在微信浏览器上可能有些问题，且微信浏览器的内核会缩小界面，达不到原生'企业微信'的效果图，建议使用非微信浏览器打开。由于滑动有点难做，我就懒得做了，打开界面后，直接点击绿色大字体
+        <span style="color: rgb(0, 255, 0)">出/入</span>
+        即可切换，点击最下方的
+        <span style="color: rgb(255, 0, 0)">时间条</span>
+        即可再次切换为输入界面 <br />请遵守学校相关防疫要求，本人仅做代码和技术的分享，如若出事概不负责 <br />邮箱联系：hty@hty.ink  微信联系：DBY_HTY
+      </div>
+      <br />
+    </div>
+  </body>
+</html>

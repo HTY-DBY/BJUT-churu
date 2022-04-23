@@ -1,0 +1,36 @@
+//动态显示时间
+var timerID = null;
+var timerRunning = false;
+
+function stopclock() {
+    if (timerRunning)
+        clearTimeout(timerID);
+    timerRunning = false;
+}
+
+function startclock() {
+    stopclock();
+    showtime();
+}
+
+// 封装一个函数返回当前的时分秒 格式 08:08:08
+function getTimer() {
+    var time = new Date();
+    var h = time.getHours();
+    h = h < 10 ? '0' + h : h;
+    var m = time.getMinutes();
+    m = m < 10 ? '0' + m : m;
+    var s = time.getSeconds();
+    s = s < 10 ? '0' + s : s;
+    return h + ':' + m + ':' + s;
+}
+
+function showtime() {
+    var date = new Date();
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;
+    var dates = date.getDate();
+    document.clock.thetime.value = year + "年" + month + "月" + dates + "日 " + getTimer();
+    timerID = setTimeout("showtime()", 1000);
+    timerRunning = true;
+}

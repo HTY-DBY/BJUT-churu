@@ -1,0 +1,144 @@
+/* 设置背景图，字体设置为微软雅黑 */
+body {
+    font-family: 宋体;
+}
+
+/* 整个登录框的css，并使用绝对定位居中 */
+.login {
+    /* relative */
+    line-height: 20px;
+    /*垂直居中关键*/
+    text-align: center;
+    height: 200px;
+    font-size: 36px;
+}
+
+#shadeDiv {
+    background: rgba(0, 0, 0, .7);
+    filter: alpha(opacity=50);
+    /* IE的透明度 */
+    opacity: 0.5;
+    /* 透明度 */
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    /* 此处的图层要大于页面 */
+    display: none;
+}
+
+/* 前面分析过的h1标签的css，text-shadow设置阴影使文字更好看，letter-spacing设置字符间距 */
+.CSS_Titil {
+    color: #0cf51f;
+    text-align: center;
+    font-size: 2ch;
+}
+
+.CSS_Titil_then {
+    text-align: center;
+    font-size: 0.8ch;
+}
+
+.CSS_Titil_then_1 {
+    text-align: center;
+    font-size: 0.7ch;
+    margin-top: 0px;
+}
+
+
+.CSS_Titil_then_2 {
+    text-align: center;
+    color: #fc0404;
+    font-size: 0.9ch;
+    margin-top: 10px;
+}
+
+.CSS_Titil_then_3 {
+    text-align: center;
+    font-size: 0.5ch;
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+}
+
+
+/* 两个输入框的css，border属性设置边框线粗细以及颜色，border-radius设置边框的圆角角度 */
+.CSS_input {
+    position: relative;
+    width: 80%;
+    padding: 15px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+
+}
+
+
+/* 登录按钮的css，cursor:pointer当鼠标移到按钮上面时变成小手形状 */
+.CSS_button {
+    width: 40%;
+    padding: 10px;
+    background-color: #d1cfbc;
+    border: 1px solid black;
+    border-radius: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 1ch;
+}
+
+.file {
+    position: relative;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+
+}
+
+
+/*a  upload */
+.a-upload {
+    padding: 5px 10px;
+    line-height: 30px;
+    font-size: 1ch;
+    border-radius: 40px;
+    position: relative;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    background: #fafafa;
+    border: 1px solid #ddd;
+
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1
+}
+
+.a-upload input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer
+}
